@@ -1,0 +1,11 @@
+diff --git a/node_modules/react-native-vision-camera/android/src/main/java/com/margelo/nitro/camera/hybrids/orientation/HybridDeviceOrientationManager.kt b/node_modules/react-native-vision-camera/android/src/main/java/com/margelo/nitro/camera/hybrids/orientation/HybridDeviceOrientationManager.kt
+--- a/node_modules/react-native-vision-camera/android/src/main/java/com/margelo/nitro/camera/hybrids/orientation/HybridDeviceOrientationManager.kt
++++ b/node_modules/react-native-vision-camera/android/src/main/java/com/margelo/nitro/camera/hybrids/orientation/HybridDeviceOrientationManager.kt
+@@ -25,4 +25,5 @@
+       val activity = context.currentActivity
+-      if (activity != null) {
+-        val surfaceRotation = activity.display.rotation
++      val display = activity?.display
++      if (display != null) {
++        val surfaceRotation = display.rotation
+         currentOrientation = CameraOrientation.fromSurfaceRotation(surfaceRotation)
