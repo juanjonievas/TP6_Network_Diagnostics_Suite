@@ -1,4 +1,5 @@
 diff --git a/node_modules/react-native-nitro-image/android/CMakeLists.txt b/node_modules/react-native-nitro-image/android/CMakeLists.txt
+index 7ead9fd..58af3e7 100644
 --- a/node_modules/react-native-nitro-image/android/CMakeLists.txt
 +++ b/node_modules/react-native-nitro-image/android/CMakeLists.txt
 @@ -23,6 +23,12 @@ endif()
@@ -14,4 +15,3 @@ diff --git a/node_modules/react-native-nitro-image/android/CMakeLists.txt b/node
  include_directories(
          "src/main/cpp"
          "../cpp"
-
