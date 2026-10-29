@@ -14,3 +14,4 @@ diff --git a/node_modules/react-native-nitro-image/android/CMakeLists.txt b/node
  include_directories(
          "src/main/cpp"
          "../cpp"
+
