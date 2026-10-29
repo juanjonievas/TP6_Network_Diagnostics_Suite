@@ -42,6 +42,7 @@ jobs:
       - name: Install Node Dependencies
         run: |
           npm install --legacy-peer-deps
+          npx patch-package
           npm ci --prefix backend
 
       - name: Run Automated Tests
