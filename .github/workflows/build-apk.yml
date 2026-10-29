@@ -44,6 +44,7 @@ jobs:
           npm install --legacy-peer-deps
           npx patch-package
           npm ci --prefix backend
+          find node_modules -name "graphicsConversions.h" -exec sed -i 's/std::format("{}%", dimension.value)/std::to_string(dimension.value) + "%"/g' {} +
 
       - name: Run Automated Tests
         run: npm run test
@@ -67,6 +68,7 @@ jobs:
       - name: Build Android Debug APK
         run: |
           set -o pipefail
+          find ~/.gradle -name "graphicsConversions.h" -exec sed -i 's/std::format("{}%", dimension.value)/std::to_string(dimension.value) + "%"/g' {} + 2>/dev/null || true
           cd android
           ./gradlew clean assembleDebug --no-daemon --stacktrace 2>&1 | tee ../gradle-build.log
 
